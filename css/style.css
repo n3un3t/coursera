@@ -1,0 +1,19 @@
+.row{
+    width: 100%
+}
+
+@media (min-width:992px) {
+    .lg{
+        width:25%;
+    }
+}
+@media (min-width:768px) and (max-width: 991px) {
+    .md{
+        width:50%;
+    }
+}
+@media (max-width:767px) {
+    .sm{
+        width:100%;
+    }
+}
