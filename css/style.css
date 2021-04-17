@@ -1,19 +1,40 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+h1{
+    margin-bottom: 15px;
+}
+
 .row{
-    width: 100%
+    width: 100%;
+}
+
+section{
+    border:2px solid  #1572FA;
+    background-color:#FAD215;
+    padding: 5px;
+    margin: 10px;
 }
 
 @media (min-width:992px) {
     .lg{
-        width:25%;
+        float:left;
+        width:33.3%;
     }
 }
+
 @media (min-width:768px) and (max-width: 991px) {
     .md{
+        float:left;
         width:50%;
     }
 }
+
 @media (max-width:767px) {
     .sm{
+        float:left;
         width:100%;
     }
 }
