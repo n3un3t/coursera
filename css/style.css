@@ -1,21 +1,51 @@
 *{
     box-sizing: border-box;
-    margin: 0;
 }
 
 h1{
     margin-bottom: 15px;
+    text-align: center;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
 
 .row{
     width: 100%;
 }
 
+.container{
+    border: 2px solid black;
+    background-color: lightblue;
+
+}
+
+#b1{
+    border: 2px solid black;
+    background-color: #FFC300;
+    padding:2px;
+    width: fit-content;
+    float:right;
+    font-family: Georgia, serif;
+}
+#b2{
+    border:2px solid black;
+    background-color: #0739F9;
+    padding:2px;
+    width: fit-content;
+    float:right;
+    font-family: Georgia, serif;
+}
+#b3{
+    border:2px solid black;
+    background-color: #32F907;
+    padding:2px;
+    width: fit-content;
+    float:right;
+    font-family: Georgia, serif;
+}
 section{
-    border:2px solid  #1572FA;
-    background-color:#FAD215;
-    padding: 5px;
-    margin: 10px;
+    clear: right;
+    font-family: Georgia, serif;
+    padding: 0px 10px;
 }
 
 @media (min-width:992px) {
@@ -23,12 +53,29 @@ section{
         float:left;
         width:33.3%;
     }
+    .container{
+        margin: 10px;
+    }
+    #b1,#b2,#b3{
+        margin: 10px 10px 0px 10px
+    }
 }
 
 @media (min-width:768px) and (max-width: 991px) {
-    .md{
+    .md-1,.md-2{
         float:left;
+    }
+    .md-1{
         width:50%;
+    }
+    .md-2{
+        width:100%
+    }
+    .container{
+        margin: 10px;
+    }
+    #b1,#b2,#b3 {
+        margin: 10px 10px 0px 10px
     }
 }
 
@@ -36,5 +83,11 @@ section{
     .sm{
         float:left;
         width:100%;
+    }
+    .container{
+        margin: 10px 50px 10px 50px;
+    }
+    #b1,#b2,#b3{
+        margin: 10px 50px 0px 50px
     }
 }
