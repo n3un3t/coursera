@@ -9,6 +9,12 @@ h1{
     font-size: 175%;
 }
 
+section{
+    clear: right;
+    padding: 0px 10px;
+}
+
+
 .row{
     width: 100%;
 }
@@ -16,7 +22,14 @@ h1{
 .container{
     border: 1px solid black;
     background-color: lightblue;
-    font-family: Georgia, serif;
+    font-family: Georgia, serif; 
+    height: 145px;
+    overflow: hidden;
+}
+
+.markup{
+    font-weight: bolder;
+    font-style: italic;
 }
 
 #b1{
@@ -27,47 +40,45 @@ h1{
     float:right;
     font-family: Georgia, serif;
     font-size: 125%;
+    position: relative;
+    top: -1px;
+    right: -1px;
 }
 
 #b2{
+    color: white;
     border:1px solid black;
-    background-color: #0739F9;
+    background-color: #900C3F;
     padding:2px;
     width: fit-content;
     float:right;
     font-family: Georgia, serif;
     font-size: 125%;
+    position: relative;
+    top: -1px;
+    right: -1px;
 }
 #b3{
     border:1px solid black;
-    background-color: #32F907;
+    background-color: #04B605;
     padding:2px;
     width: fit-content;
     float:right;
     font-family: Georgia, serif;
     font-size: 125%;
+    position: relative;
+    top: -1px;
+    right: -1px;
 }
-section{
-    clear: right;
-    padding: 0px 10px;
-}
-.bold{
-    font-weight: bolder;
-}
+
 
 @media (min-width:992px) {
     .lg{
         float:left;
         width:33.3%;
-        
     }
     .container{
         margin: 10px;
-        
-    }
-    /* borders not adding up in contrast to postioning */
-    #b1,#b2,#b3{
-        margin: 10px 10px 0px 10px
     }
 }
 
@@ -84,10 +95,6 @@ section{
     .container{
         margin: 10px;
     }
-    /* borders not adding up */
-    #b1,#b2,#b3 {
-        margin: 10px 10px 0px 10px
-    }
 }
 
 @media (max-width:767px) {
@@ -97,9 +104,5 @@ section{
     }
     .container{
         margin: 10px 50px 10px 50px;
-    }
-    /* borders not adding up */
-    #b1,#b2,#b3{
-        margin: 10px 50px 0px 50px
     }
 }
