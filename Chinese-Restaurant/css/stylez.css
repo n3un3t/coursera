@@ -4,7 +4,9 @@ body {
     background-color: #61122f;
     font-family: 'Oxygen', sans-serif;
 }
-
+.container{
+    width: 100%;
+}
 #header-nav {
     background-color: #f6b319;
     border: 0;
@@ -23,7 +25,6 @@ body {
 }
 #nav-list a{
     color:#61122f;
-    text-align: center;
     text-decoration: none;
 }
 #nav-list li:hover{
@@ -68,10 +69,49 @@ body {
 
 .navbar-brand p span{
     vertical-align: middle;
+    font-size: 0.8em;
 }
 .nav-item {
     margin-right: 10px;
 }
 .navbar-light .navbar-toggler{
+    clear:both;
     background-color: #61122f;
 } 
+/* Extra Large */
+@media (min-width: 1200px){
+    
+}
+/* Large */
+@media (min-width:992px) and (max-width:1199px){
+    #logo-img{
+        background: url(../images/restaurant-logo_medium.png) no-repeat;
+        width: 100px;
+        height: 100px;
+    }
+    
+}
+
+@media(max-width:991px) {
+    .navbar-brand h1 {
+        font-size: 3.5vw;
+    }
+    .navbar-brand p {
+        font-size: 0.5em
+    }
+    .navbar p img {
+        height: 20px;
+    }
+}
+
+@media (max-width:767px) {
+    #nav-list a {
+        font-size:1.2em;
+    }
+    #nav-list a span{
+        margin-right: 5px;
+    }
+    .nav-item {
+        margin-bottom: 5px;
+    }
+}
