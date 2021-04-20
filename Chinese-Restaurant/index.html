@@ -14,38 +14,64 @@
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&display=swap"
         rel="stylesheet">
 
+    <!-- ICONS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 </head>
 
 <body>
     <header>
-        <nav id='header-nav' class="navbar navbar-expand-lg navbar-light">
-            <div class='container-fluid'>
-                <a class='navbar-brand' href='index.html'>
-                    <img class='float-start d-none d-lg-block' id='logo-img' src='/images/restaurant-logo_large.png'
+        <nav id='header-nav' class="navbar navbar-expand-md navbar-light">
+            <div class='container'>
+
+                <a class='navbar-brand float-start' href='index.html'>
+                    <img class='d-none d-lg-block float-start' id='logo-img' src='/images/restaurant-logo_large.png'
                         alt='logo-img'>
+                    <div>
+                        <h1>David Chu's China Restaurant</h1>
+                        <p>
+                            <img src='/images/star-k-logo.png' alt='Kosher certification'>
+                            <span>Kosher Certified</span>
+                        </p>
+                    </div>
                 </a>
-                <a class='navbar-brand' href='index.html'>
+
+                <!-- <a class='navbar-brand me-auto' href='index.html'>
                     <h1>David Chu's China Restaurant</h1>
                     <p>
                         <img src='/images/star-k-logo.png' alt='Kosher certification'>
                         <span>Kosher Certified</span>
                     </p>
-                </a>
+                </a> -->
+
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class='navbar-nav me-auto mb-2 mb-lg-0'>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
+
+                <div class="collapse navbar-collapse float-end" id="navbarSupportedContent">
+                    <ul id='nav-list' class='nav navbar-nav float-end ms-auto mb-lg-0'>
+                        <li class='nav-item'>
+                            <a href="#">
+                                <span class='fas fa-utensils'></span><br class='d-none d-md-block'> Menu
+                            </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
+                        <li class='nav-item'>
+                            <a href='#'>
+                                <span class='fas fa-info'></span><br class='d-none d-md-block'> About
+                            </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
+                        <li class='nav-item'>
+                            <a href="#">
+                                <span class='fas fa-certificate'></span><br class='d-none d-md-block'> Awards
+                            </a>
+                        </li>
+                        <li id='phone' class='d-none d-md-block'>
+                            <a href='tel:410-602-5008'>
+                                <span>410&nbsp;602&nbsp;5008</span>
+                            </a>
+                            <div>* We Deliver</div>
                         </li>
                     </ul>
                 </div>
