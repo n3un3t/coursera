@@ -78,18 +78,37 @@ body {
     clear:both;
     background-color: #61122f;
 } 
-/* Extra Large */
-@media (min-width: 1200px){
+/* Jumbotron patterns from bootstrap 4 */
+.jumbotron {
+    padding: 4rem 2rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    background-color: var;
+    border-radius: 1rem;
+}
+
+/* XXL */
+/* @media (min-width:1401px){
     
+} */
+/* Extra Large */
+@media (min-width: 1200px) {
+    .jumbotron{
+        background: url('../images/jumbotron_1200.jpg') no-repeat;
+        height: 675px;
+        box-shadow: 0 0 50px #3F0C1F;
+        border: 2px solid #3F0C1F;
+        background-size: cover;
+    }
 }
 /* Large */
 @media (min-width:992px) and (max-width:1199px){
     #logo-img{
-        background: url(../images/restaurant-logo_medium.png) no-repeat;
+        background-image: url(../images/restaurant-logo_medium.png) no-repeat;
         width: 100px;
         height: 100px;
     }
-    
+   
 }
 
 @media(max-width:991px) {
