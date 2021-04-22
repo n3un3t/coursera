@@ -252,13 +252,19 @@ body {
 /* single */
 /* ------- */
 
-#single-category-title hr{
-    width:75%;
+.container hr{
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #single-category-title + div {
     margin-bottom: 50px;
 }
+.menu-item {
+    margin-bottom:15px;
+}
+
 .menu-item .menu-item-price {
     font-size: 1.1em;
     text-align: right;
@@ -392,7 +398,7 @@ h3.menu-item-title{
         height: 20px;
     }
     
-
+}
 /* Header ab Medium-Breakpoint */
 @media(min-width:576px) and (max-width:991px) {
     .navbar-brand h1 {
