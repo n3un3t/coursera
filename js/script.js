@@ -14,10 +14,12 @@ $(function () { //$ in jQuery bedeutet document.addEventListener('DOMContentLoad
     var dach = {};
 
     var homeHTML = 'snippets/main-snippet.html';
-    var allCategoriesUrl = 'https://davids-restaurant.herokuapp.com/categories.json';
+    //var allCategoriesUrl = 'https://davids-restaurant.herokuapp.com/categories.json';
+    var allCategories = 'json/categories.json'
     var categoriesTitle = 'snippets/menu-snippet.html';
     var category = 'snippets/menu-categories-snippet.html';
-    var singleCategoryURL = 'https://davids-restaurant.herokuapp.com/menu_items.json?category=';
+    //var singleCategoryURL = 'https://davids-restaurant.herokuapp.com/menu_items.json?category=';
+    var allSingleCategories = 'json/categories/';
     var singleCategory = 'snippets/single-category-snippet.html';
     var singleCategoryTitle = 'snippets/single-snippet.html';
 
@@ -97,7 +99,7 @@ $(function () { //$ in jQuery bedeutet document.addEventListener('DOMContentLoad
     //Load Menus Categories
     dach.loadMenuCategories = function () {
         showLoading('#main');
-        $ajaxUtils.sendGetRequest(allCategoriesUrl, buildAndShowCategoriesHTML); //JSON
+        $ajaxUtils.sendGetRequest(allCategories, buildAndShowCategoriesHTML); //JSON
     };
 
     function buildAndShowCategoriesHTML(categories) {
@@ -131,7 +133,7 @@ $(function () { //$ in jQuery bedeutet document.addEventListener('DOMContentLoad
 
     dach.loadMenuItems = function (categoryShort) {
         showLoading('#main');
-        $ajaxUtils.sendGetRequest(singleCategoryURL + categoryShort, buildAndShowSingleHtml);
+        $ajaxUtils.sendGetRequest(allSingleCategories + categoryShort + '.json', buildAndShowSingleHtml);
     };
 
     function buildAndShowSingleHtml(single) {

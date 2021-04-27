@@ -4,8 +4,8 @@
 
     //return ein HTTP Request Object
     function getRequestObject() {
-        if (window.XMLHttpsRequest) {
-            return (new XMLHttpsRequest())
+        if (window.XMLHttpRequest) {
+            return (new XMLHttpRequest())
         }
         else if (window.ActiveXObject) {
             return (new ActiveXObject('Microsoft.XMLHTTPS'));
