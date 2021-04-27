@@ -4,11 +4,11 @@
 
     //return ein HTTP Request Object
     function getRequestObject() {
-        if (window.XMLHttpRequest) {
-            return (new XMLHttpRequest())
+        if (window.XMLHttpsRequest) {
+            return (new XMLHttpsRequest())
         }
         else if (window.ActiveXObject) {
-            return (new ActiveXObject('Microsoft.XMLHTTP'));
+            return (new ActiveXObject('Microsoft.XMLHTTPS'));
         }
         else {
             global.alert('Ajax is not supported!');
