@@ -41,6 +41,43 @@ $(function () { //$ in jQuery bedeutet document.addEventListener('DOMContentLoad
         return string;
     };
 
+    var switchNavButtonToActive = function (buttonOff, buttonOn) {
+        buttonOff = "#" + buttonOff;
+        buttonOn = "#" + buttonOn;
+        var classe = document.querySelector(buttonOff).className;
+        classe = classe.replace(new RegExp('active', 'g'), '');
+        document.querySelector(buttonOff).className = classe;
+
+        classe = document.querySelector(buttonOn).className;
+        if (classe.indexOf('active') == -1) {
+            classe += ' active'
+            document.querySelector(buttonOn).className = classe;
+        };
+    };
+
+    var insertName = function (html, propName, propTryName) {
+
+        if (!propTryName) {
+            return html = insertProperty(html, propName, '');
+        };
+
+        propTryName = '(' + propTryName + ')';
+        html = insertProperty(html, propName, propTryName);
+
+        return html;
+    };
+
+    var insertPrice = function (html, propName, propValue) {
+
+        if (!propValue) {
+            return insertProperty(html, propName, '');
+        };
+        propValue = '$' + propValue.toFixed(2);
+        html = insertProperty(html, propName, propValue);
+
+        return html;
+    };
+
     document.addEventListener('DOMContentLoaded', function (event) {
 
         showLoading('#main');
@@ -48,6 +85,14 @@ $(function () { //$ in jQuery bedeutet document.addEventListener('DOMContentLoad
             document.querySelector('#main').innerHTML = responseText
         }, false);
     });
+
+    dach.loadHome = function () {
+        switchNavButtonToActive('menuButton', 'homeButton');
+        showLoading('#main');
+        $ajaxUtils.sendGetRequest(homeHTML, function (responseText) {
+            document.querySelector('#main').innerHTML = responseText
+        }, false);
+    }
 
     //Load Menus Categories
     dach.loadMenuCategories = function () {
@@ -58,6 +103,7 @@ $(function () { //$ in jQuery bedeutet document.addEventListener('DOMContentLoad
     function buildAndShowCategoriesHTML(categories) {
         $ajaxUtils.sendGetRequest(categoriesTitle, function (categoriesTitleHtml) {
             $ajaxUtils.sendGetRequest(category, function (categoryHtml) {
+                switchNavButtonToActive('homeButton', 'menuButton');
                 var categoriesViewHtml = buildCategoriesViewHtml(categories, categoriesTitleHtml, categoryHtml);
                 insertHtml('#main', categoriesViewHtml);
             }, false);
@@ -91,6 +137,7 @@ $(function () { //$ in jQuery bedeutet document.addEventListener('DOMContentLoad
     function buildAndShowSingleHtml(single) {
         $ajaxUtils.sendGetRequest(singleCategoryTitle, function (singleCategoryTitleHtml) {
             $ajaxUtils.sendGetRequest(singleCategory, function (singleCategoryHtml) {
+                switchNavButtonToActive('homeButton', 'menuButton');
                 var singleViewHtml = buildSingleViewHtml(single, singleCategoryTitleHtml, singleCategoryHtml);
                 insertHtml('#main', singleViewHtml);
             }, false);
@@ -132,28 +179,7 @@ $(function () { //$ in jQuery bedeutet document.addEventListener('DOMContentLoad
         return finalHtml;
     };
 
-    function insertName(html, propName, propTryName) {
 
-        if (!propTryName) {
-            return html = insertProperty(html, propName, '');
-        };
-
-        propTryName = '(' + propTryName + ')';
-        html = insertProperty(html, propName, propTryName);
-
-        return html;
-    };
-
-    function insertPrice(html, propName, propValue) {
-
-        if (!propValue) {
-            return insertProperty(html, propName, '');
-        };
-        propValue = '$' + propValue.toFixed(2);
-        html = insertProperty(html, propName, propValue);
-
-        return html;
-    };
 
     global.$dach = dach;
 

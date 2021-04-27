@@ -64,8 +64,8 @@ body {
     margin-bottom: 0;
     line-height: .75;
 }
-.navbar-brand a:hover,.navbar-brand a:focus {
-    text-decoration: none;
+.navbar-brand:hover {
+    cursor:pointer;
 }
 .navbar-brand p {
     color:#000;
@@ -81,6 +81,9 @@ body {
 
 .nav-item {
     padding: 10px;
+}
+.nav-item:hover{
+    cursor:pointer;
 }
 
 .navbar-light .navbar-toggler{
@@ -265,7 +268,7 @@ body {
 }
 
 .menu-item .menu-item-price {
-    font-size: 1.1em;
+    font-size: 0.6em;
     text-align: right;
 }
 
@@ -291,7 +294,7 @@ body {
 }
 
 .menu-item .menu-item-price span {
-    font-size: 0.6em;
+    font-size: 1.8em;
 }
 
 .menu-item-description {

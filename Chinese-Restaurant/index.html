@@ -24,7 +24,7 @@
         <nav id='header-nav' class="navbar navbar-expand-md navbar-light">
             <div class='container-xl'>
 
-                <div class='navbar-brand' href='index.html'>
+                <div class='navbar-brand' href='index.html' onclick='$dach.loadHome();'>
                     <img class='d-none d-lg-block float-start' id='logo-img' src='./images/restaurant-logo_large.png'
                         alt='logo-img'>
                     <div>
@@ -43,8 +43,13 @@
 
                 <div class="collapse navbar-collapse" id="navbarContent">
                     <ul id='nav-list' class='navbar-nav ms-auto'>
-                        <li class='nav-item'>
-                            <a href='#' onclick='$dach.loadMenuCategories();'>
+                        <li id='homeButton' class='nav-item d-md-none active' onclick='$dach.loadHome();'>
+                            <a>
+                                <span class="fas fa-home"></span> Home
+                            </a>
+                        </li>
+                        <li id='menuButton' class='nav-item' href='#' onclick='$dach.loadMenuCategories();'>
+                            <a>
                                 <span class='fas fa-utensils'></span><br class='d-none d-md-block'> Menu
                             </a>
                         </li>
