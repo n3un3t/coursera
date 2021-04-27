@@ -25,12 +25,12 @@
             <div class='container-xl'>
 
                 <div class='navbar-brand' href='index.html'>
-                    <img class='d-none d-lg-block float-start' id='logo-img' src='/images/restaurant-logo_large.png'
+                    <img class='d-none d-lg-block float-start' id='logo-img' src='./images/restaurant-logo_large.png'
                         alt='logo-img'>
                     <div>
                         <h1>David Chu's China Restaurant</h1>
                         <p>
-                            <img src='/images/star-k-logo.png' alt='Kosher certification'>
+                            <img src='./images/star-k-logo.png' alt='Kosher certification'>
                             <span>Kosher Certified</span>
                         </p>
                     </div>
@@ -43,8 +43,13 @@
 
                 <div class="collapse navbar-collapse" id="navbarContent">
                     <ul id='nav-list' class='navbar-nav ms-auto'>
+                        <li class='nav-item d-md-none'>
+                            <a href='index.html'>
+                                <span class="fas fa-home"></span> Home
+                            </a>
+                        </li>
                         <li class='nav-item active'>
-                            <a href="menu-categories">
+                            <a href="menu-categories.html">
                                 <span class='fas fa-utensils'></span><br class='d-none d-md-block'> Menu
                             </a>
                         </li>
@@ -78,59 +83,6 @@
     <div id='xs-deliver' class='text-center d-md-none'>* We Deliver</div>
 
     <div id='main' class='container'>
-        <h2 id='menu-categories-title' class='text-center'>Menu Categories</h2>
-        <div class='text-center'>Substituting white rice with brown rice or fried rice after 3:00pm will be $1.50 for a
-            pint and $2.50 for a quart.</div>
-        <section class="row">
-            <div class='col-xxl-2 col-lg-3 col-md-4 col-sm-6'>
-                <a href='single-category.html'>
-                    <div class='category-title'>
-                        <img src='' height="200" width='200'>
-                        <span>Menu</span>
-                    </div>
-                </a>
-            </div>
-            <div class='col-xxl-2 col-lg-3 col-md-4 col-sm-6'>
-                <a href='#'>
-                    <div class='category-title'>
-                        <img src='' height="200" width='200'>
-                        <span></span>
-                    </div>
-                </a>
-            </div>
-            <div class='col-xxl-2 col-lg-3 col-md-4 col-sm-6'>
-                <a href='#'>
-                    <div class='category-title'>
-                        <img src='' height="200" width='200'>
-                        <span></span>
-                    </div>
-                </a>
-            </div>
-            <div class='col-xxl-2 col-lg-3 col-md-4 col-sm-6'>
-                <a href='#'>
-                    <div class='category-title'>
-                        <img src='' height="200" width='200'>
-                        <span></span>
-                    </div>
-                </a>
-            </div>
-            <div class='col-xxl-2 col-lg-3 col-md-4 col-sm-6'>
-                <a href='#'>
-                    <div class='category-title'>
-                        <img src='' height="200" width='200'>
-                        <span></span>
-                    </div>
-                </a>
-            </div>
-            <div class='col-xxl-2 col-lg-3 col-md-4 col-sm-6'>
-                <a href='#'>
-                    <div class='category-title'>
-                        <img src='' height="200" width='200'>
-                        <span></span>
-                    </div>
-                </a>
-            </div>
-        </section>
     </div> <!-- #main -->
 
     <footer class='panel-footer'>
@@ -164,6 +116,7 @@
 
     <script src='js/jquery-3.6.0.min.js'></script>
     <script src='js/bootstrap.min.js'></script>
+    <script src='js/ajax-utils.js'></script>
     <script src='js/script.js'></script>
 
 </body>
