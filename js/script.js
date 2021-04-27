@@ -133,7 +133,7 @@ $(function () { //$ in jQuery bedeutet document.addEventListener('DOMContentLoad
 
     dach.loadMenuItems = function (categoryShort) {
         showLoading('#main');
-        $ajaxUtils.sendGetRequest(allSingleCategories + categoryShort + '.Json', buildAndShowSingleHtml);
+        $ajaxUtils.sendGetRequest(allSingleCategories + categoryShort + '.json', buildAndShowSingleHtml);
     };
 
     function buildAndShowSingleHtml(single) {
