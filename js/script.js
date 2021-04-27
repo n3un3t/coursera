@@ -14,10 +14,10 @@ $(function () { //$ in jQuery bedeutet document.addEventListener('DOMContentLoad
     var dach = {};
 
     var homeHTML = 'snippets/main-snippet.html';
-    var allCategoriesUrl = 'http://davids-restaurant.herokuapp.com/categories.json';
+    var allCategoriesUrl = 'https://davids-restaurant.herokuapp.com/categories.json';
     var categoriesTitle = 'snippets/menu-snippet.html';
     var category = 'snippets/menu-categories-snippet.html';
-    var singleCategoryURL = 'http://davids-restaurant.herokuapp.com/menu_items.json?category=';
+    var singleCategoryURL = 'https://davids-restaurant.herokuapp.com/menu_items.json?category=';
     var singleCategory = 'snippets/single-category-snippet.html';
     var singleCategoryTitle = 'snippets/single-snippet.html';
 
