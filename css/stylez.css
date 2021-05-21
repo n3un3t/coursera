@@ -311,7 +311,7 @@ h3.menu-item-title{
 }
 
 /* XXL */
-@media (min-width:1400px){
+@media (min-width:1401px){
     .jumbotron{
         background: url('../images/jumbotron_1200.jpg') no-repeat;
         height: 760px;
@@ -321,7 +321,7 @@ h3.menu-item-title{
 }
 
 /* Extra Large */
-@media (min-width: 1200px) and (max-width:1401px) {
+@media (min-width: 1200px) and (max-width:1400px) {
     .jumbotron{
         background: url('../images/jumbotron_1200.jpg') no-repeat;
         height: 675px;
