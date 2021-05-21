@@ -23,8 +23,8 @@ section{
     border: 1px solid black;
     background-color: lightblue;
     font-family: Georgia, serif; 
-    height: 145px;
-    overflow: hidden;
+    height: 165px;
+    overflow:hidden;
 }
 
 .markup{
@@ -89,10 +89,10 @@ section{
     .md-1,.md-2{
         float:left;
     }
-    .md-1{
+    .md-2{
         width:50%;
     }
-    .md-2{
+    .md-1{
         width:100%
     }
     .container{
